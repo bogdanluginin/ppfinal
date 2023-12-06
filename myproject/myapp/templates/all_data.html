@@ -1,0 +1,22 @@
+<!-- myapp/templates/all_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Data</title>
+</head>
+<body>
+    <h2>Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.first_name }} {{ student.last_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Ratings</h2>
+    <ul>
+        {% for rating in ratings %}
+            <li>{{ rating.value }} for {{ rating.student.first_name }} {{ rating.student.last_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
